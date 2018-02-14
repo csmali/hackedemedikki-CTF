@@ -6,7 +6,7 @@ Selamlar arkadaslar DKHOS CTF’inde hackedemedikki(ki ayri) takimi olarak yaris
 
 Bize bir adet memory image verilmis durumda. Onceki CTF’lerden kullandigim ve okudugum kadariyla volatility kullanilacagini anliyoruz. Imagei okuyabilmek icin bir isletim sistemi profili secmemiz gerekiyor. Bu profili tespit etmek icin su komutu kullaniyoruz.
 
-volatility -f for400.img imageinfo
+    volatility -f for400.img imageinfo
 
 ![ilk](https://github.com/csmali/hackedemedikki-CTF/blob/master/DKHOS/forensics/forensics400/1.jpg "ilk")
 
