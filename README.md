@@ -1,3 +1,5 @@
 # hackedemedikki-CTF
 
-Contains writeup
+hackedemedikki takımı DKHOS CTF writeuplarını içerir
+
+
