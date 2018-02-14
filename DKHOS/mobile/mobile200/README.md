@@ -50,10 +50,10 @@ adb pull /data/data/com.mfc.mobile200/cachezxclc/tolof.dex .
 
 Artık elimizde bir dex dosyası var. Bu dex dosyasını okunabilir bir source koduna çevirmemiz gerek. Bu nedenle jadx-gui'nin de açabileceği jar formatına çeviriyoruz. Bunun için sırasıyla aşağıdaki komutları kullanıyoruz.
 
-adb pull /system/framework
-java -jar baksmali.jar deodex tolof.dex -b framework/x86/boot.oat -o out
-java -jar smali.jar ass ./out -o app.dex
-d2j-dex2jar.sh app.dex -o newapk.jar
+	 adb pull /system/framework
+	 java -jar baksmali.jar deodex tolof.dex -b framework/x86/boot.oat -o out
+	 java -jar smali.jar ass ./out -o app.dex
+	 d2j-dex2jar.sh app.dex -o newapk.jar
 
 ![sekiz](https://github.com/csmali/hackedemedikki-CTF/blob/master/DKHOS/mobile/mobile200/8.png "sekiz")
 
