@@ -3,7 +3,7 @@
 ## Tutmayın küçük enişteyi
 
 Öncelikle apk'nın source kodlarını jadx-gui toolunu kullanarak inceledim. İlk olarak AndroidManifest.xml'de tanımlı izinlere göz attım. MainActivity'yi tespit etmek dışında buradan bir şey çıkmadı.
-MainActivity'i incelemeye devam ettim. onCreate() apk'nın emulatorde çalışmasını engelleyen bir kontrol olduğunu fark ettim.
+MainActivity'i incelemeye devam ettim. onCreate() metodunda apk'nın emulatorde çalışmasını engelleyen bir kontrol olduğunu fark ettim.
 
 ![ilk](https://github.com/csmali/hackedemedikki-CTF/blob/master/DKHOS/mobile/mobile200/1.png "ilk")
 
@@ -37,7 +37,7 @@ Uygulamayı tekrar çalıştırdığımda Emulator detectionu aşmış oldum ve 
 	>> 8WTSZJn26p9xdrTuxcedV/GOftOrQKtfRcNw9YOTSts=
 
 onCreate() metodunu inceleme başladım. k() metodunun çağrıldığını gördüm. Bu metodda a("suport", a.a(b.cZ)); şeklinde bir metod kullanılmış. b.cZ'de bir string tutuluyor.
-b sınıfını incelediğimde bu stringin "n**NTS**o**NTS**t**NTS**-**NTS**c**NTS**a**NTS**c**NTS**h**NTS**e**NTS**".replace("**NTS**",""); ile bulunduğunu yani kısaca değerinin 'not-cache' oldugunu gördüm.
+b sınıfını incelediğimde bu stringin "n\*\*NTS\*\*o\*\*NTS\*\*t\*\*NTS\*\*-\*\*NTS\*\*c\*\*NTS\*\*a\*\*NTS\*\*c\*\*NTS\*\*h\*\*NTS\*\*e\*\*NTS\*\*".replace("\*\*NTS\*\*",""); ile bulunduğunu yani kısaca değerinin 'not-cache' oldugunu gördüm.
 a sınıfındaki string a(String str) metodu ise input alarak aldığı stringin md5 hashini dönüyordu. Yani a.a(b.cZ) ifadesi "not-cache" in md5 hashi olan 0f5347b7a11435c3b3396d2db4db76c4 değerini dönüyor.
 Artık elimizde a("suport","0f5347b7a11435c3b3396d2db4db76c4") ifadesi var. Bu metodu incelediğimde raw package'ının altındai "suport" isimli dosyanın decrypt edilerek "decr" isimli yeni bir dosyaya yazıldığını gördüm. Burada AES cipher ve anahtar olarak daha önce hesapladığımız hash değeri olan "0f5347b7a11435c3b3396d2db4db76c4" kullanılmış. Daha sonra bu "decr" dosyası "tolof" isimli farklı bir dosyaya kopyalandıktan sonra siliniyor. "tolof" dosyası ise data/data'nın altında uygulamaya ayrılmış olan alanda "cachezxclc" adlı bir klasörde bulunuyor ve buradan dex classları load edildikten sonra dosya siliniyor. Dosyanın silinmemesi için ilgili komutu command out ediyoruz.
 
