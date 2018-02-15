@@ -29,3 +29,25 @@ Bu bilgilerle artik Google Maps'e girip sirdaki ip ucunu arayabiliriz:
 
 
 Bu pdf TOR linkini bulmamiz icin gerekli. Resimdeki sayilarin sirasiyla pdfdeki paragraf, kelime ve karakter sayilarina karsilik geldigini dusunerek URL'mizi olusturuyoruz: http://dkhosweozgaqjxxh.onion.to/
+
+Ayrıca indirdiğimiz pdfe exiftool ile bakmamazlık yapmıyoruz
+![comment](author.jpg)
+
+Onion linkiyle indirdiğimiz torrenti i2p kurarak bilgisayarımıza indiriyoruz ve bir zip dosyasıyla karşılaşıyoruz. Ancak bize password gerekli.
+
+Bir önceki author bilgisindeki stringi parola olarak denedik ama olmadı. Ardından bu değerin bir wallet değeri oldugunu düşündük
+Blockchain infodan hemen transactionlara baktık ve bir diğer adresi bulduk
+![password](password.jpg) 
+
+Bu degeri password olarak kullandık ve 5 tane resimle karşılaştık exiftool ile yine bu resimlerin detaylarına baktık
+![coordinates](coordinates.jpg) 
+
+Burada buldugumuz koordinatları hemen convert ettik ve bir mapte işaretledik.
+![map](map.jpg) 
+
+Bildigimiz bütün orta nokta formüllerini denedik. Ancak bir sonuca ulaşamadık. Ardından DKHOS twitter hesabından verilen ipucunu gördük ve hemen kullandık.
+![ipucu](ipucu.jpg) 
+
+Hızlı bir hesapla orta noktayı bulup google mapste arattık. ve flag karşımızdaydı. Ayrıca soruyu ilk çözen ekip olarak +50 puanımızı da aldık ^^
+
+DKHOS_{ALLEXIS}
