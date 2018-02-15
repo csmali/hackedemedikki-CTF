@@ -59,7 +59,7 @@ XXE başlı başına bir konu olduğu için bu yazıda XXE'yi açıklamayacağı
 1) Birinci satırda `data` Entity'si `c:/windows/win.ini` dosyasına link ediyor. Yani `data` fonksiyonu çağırıldığında `c:/windows/win.ini` dosyasının base64 encode edilmiş içeriğini dönecek gibi düşünebilirsiniz.
 
 2) İkinci satırda `param1` Entity'si `exfil` adında başka bir Entity tanımlıyor ve bu `exfil` Entity'si `http://x.x.x.x:443/` adresine `data` Entity'sinin içeriğini(Base64 encode edilmiş `c:/windows/win.ini` dosyası) gönderiyor.
-![teambios](team-bios.png)  
+![teambios](team-bios.jpg)  
 
 
 Bu aşamadan sonra `c:/windows/win.ini` dosyasını okumak için aşağıdaki şekilde istek gönderdim:
