@@ -8,7 +8,7 @@ Soruda bize sadece bir IP adresi veriliyor. Bu IP adresini ziyaret ettiğimde bi
 ![adim1](adim_1.png)
 
 
-Formu doldurup gönderdiğim. Sonra bu isteği Burp Suite'in Repeater aracı ile açıp isteği tekrarladım ve bunu yaptığımda **Sorry, this email is already registered!** mesajı ile karşılaştıım. Kısaca farklı emailler ile isteği tekrarladım ancak mesaj hiç değişmedi. Sonra kısaca her parametreye SQL Injection denemesi yaptım ancak bu da hiçbir sonuç vermedi. İsteğin XML olarak gitmesi akıllara direk XXE Injection(XML External Entity Injection) açığını getirmeli. XML parserlarının bir özelliğinden dolayı oluşan bu güvenlik açığı birçok büyük firmada daha önce bulunmuş ve rapor edenlere binlerce dolar kazandırmıştır. Örnek olarak Google ve Facebookta bulunmuş XXE açıklarının İngilizce write-up'larını okuyabilirsiniz.
+Formu doldurup gönderdim. Sonra bu isteği Burp Suite'in Repeater aracı ile açıp isteği tekrarladım ve bunu yaptığımda **Sorry, this email is already registered!** mesajı ile karşılaştıım. Kısaca farklı emailler ile isteği tekrarladım ancak mesaj hiç değişmedi. Sonra kısaca her parametreye SQL Injection denemesi yaptım ancak bu da hiçbir sonuç vermedi. İsteğin XML olarak gitmesi akıllara direk XXE Injection(XML External Entity Injection) açığını getirmeli. XML parserlarının bir özelliğinden dolayı oluşan bu güvenlik açığı birçok büyük firmada daha önce bulunmuş ve rapor edenlere binlerce dolar kazandırmıştır. Örnek olarak Google ve Facebookta bulunmuş XXE açıklarının İngilizce write-up'larını okuyabilirsiniz.
 
 Google XXE (Ödül $10,000): https://blog.detectify.com/2014/04/11/how-we-got-read-access-on-googles-production-servers/  
 Facebook XXE (Ödül $30,000): https://www.ubercomp.com/posts/2014-01-16_facebook_remote_code_execution
