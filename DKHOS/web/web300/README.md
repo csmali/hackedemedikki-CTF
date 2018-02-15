@@ -41,11 +41,11 @@ XXE başlı başına bir konu olduğu için bu yazıda XXE'yi açıklamayacağı
 
 1) Dördüncü satırda `sp` adında bir XML Entity tanımı yapılıyor. Bu Entity başka bir IP adresindeki DTD dosyasına link ediyor. DTD dosyası dediğimiz bildiğimiz XML dosyası. 
 
-2) 5. satırda bu tanımı yapılan Entity çağırılıyor. Tıpkı fonksiyon gibi düşünün. Tanımını yaptığınız fonksiyonu çağırmazsanız o fonksiyon hiçbir işe yaramaz.
+2) Beşinci satırda bu tanımı yapılan Entity çağırılıyor. Tıpkı fonksiyon gibi düşünün. Tanımını yaptığınız fonksiyonu çağırmazsanız o fonksiyon hiçbir işe yaramaz.
 
 3) XML parser verilen IP adresindeki DTD dosyasını yükleyip parse ediyor.
 
-4) 6. ve 7. satırlarda, yüklenen DTD içinde tanımlanmış olan `param1` ve `exfil` Entityleri çağırılıyorlar. Fonksiyon benzetmesinden devam edersek, DTD dosyasında tanımlı fonksiyonlar çağırılıyor diyebiliriz. Bu sayede XML parser DTD'yi import ettiğinde `param1` ve `exfil` Entitylerine erişebilecek.
+4) Altıncı ve 7. satırlarda, yüklenen DTD içinde tanımlanmış olan `param1` ve `exfil` Entityleri çağırılıyorlar. Fonksiyon benzetmesinden devam edersek, DTD dosyasında tanımlı fonksiyonlar çağırılıyor diyebiliriz. Bu sayede XML parser DTD'yi import ettiğinde `param1` ve `exfil` Entitylerine erişebilecek.
 
 
 
