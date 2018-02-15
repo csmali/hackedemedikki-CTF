@@ -75,7 +75,7 @@ Bu aşamadan sonra `c:/windows/win.ini` dosyasını okumak için aşağıdaki ş
 
 **XXE zafiyeti bulunan sunucu, Burp'ün sunucusuna `c:/windows/win.ini` dosyasını Base64 encode edip gönderiyor:**
 
-![adim9](adim_9.png) 
+![adim9](adim_10.png) 
 
 
 
