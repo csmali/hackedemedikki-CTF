@@ -1,6 +1,6 @@
-#NuitDuHack web350 
+# NuitDuHack web350 
 
-##PixEditor
+## PixEditor
 
 ```
 Description
@@ -49,7 +49,7 @@ Klasik php için kullandığımız command execution payloadu
  "<?echo passthru($_GET['cmd']); ?>"
 ```
 
-Her karakteri el ile bulup yapmak zor oldugu için python scripti yazdım. payloadun ascii karşılığını alıp her üç karakteri reverse orderda birleştirmeyi sağlıyor. En son da paddingi yapıp aradaki boşluk ve virgülleri kaldırdım.
+Her karakteri el ile bulup yapmak zor oldugu için python scripti yazdım.Repositorye de ekledim. payloadun ascii karşılığını alıp her üç karakteri reverse orderda birleştirmeyi sağlıyor. En son da paddingi yapıp aradaki boşluk ve virgülleri kaldırınca RGB arrayine eklenebilir bir string veriyor .
 
 ![ucuncu](https://github.com/csmali/hackedemedikki-CTF/blob/master/nuitduhack-2018/web350/pixeditor3.png "ucuncu")
 
@@ -60,5 +60,5 @@ Ardından bunu post datasının uzunlugunu bozmadan enjekte edince php kodu çal
 ```
 parametresi ile de flagi okuduk.
 
-![ucuncu](https://github.com/csmali/hackedemedikki-CTF/blob/master/nuitduhack-2018/web350/pixeditor3.png "ucuncu")
+![dorduncu](https://github.com/csmali/hackedemedikki-CTF/blob/master/nuitduhack-2018/web350/pixeditor4.png "dorduncu")
 
